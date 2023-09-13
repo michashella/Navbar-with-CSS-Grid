@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: 0;
+}
+
+body {
+  background-color: rgba(10, 55, 52, 0.797);
+}
+
+.navbar .nav a:not(:first-child),
+.navbar .top a:not(:first-child) {
+  text-align: center;
+}
+
+.navbar .nav a {
+  color: white;
+  
+}
+
+.navbar .top .hours {
+  text-align: right;
+}
+
+.navbar .top a {
+  color: black;
+} 
+
+.navbar {
+display: grid;
+
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: 1fr 2fr auto;
+}
+
+.navbar .dropdown   {
+  display: none;
+  grid-row: 3 ;
+  grid-column: 2 / 12;
+}
+
+.navbar .options {
+  background-color: darkslategray;
+  grid-row: 3 ;
+  grid-column: 11 / 12;
+  display: none;
+  padding: 1%
+}
+.navbar .options a {
+  color: white;
+  display: inline-block;
+  padding: 10%;
+}
+
+.navbar .options:target {
+  display: block;
+}
+.navbar .dropdown:target {
+  display: block;
+}
+
+.navbar .nav {
+  background-color: rgba(144, 238, 144, 0.47);
+  grid-column: 2 / 12;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  padding: 1% ;
+}
+
+.navbar .nav,
+.navbar .top {
+  align-items: center;
+}
+
+
+
+.navbar .nav .brand {
+  grid-column: 1 / 5;
+  align-self: stretch;
+}
+
+.navbar .nav .brand img {
+  height: 75%;
+  position: relative;
+  top: 12.5%;
+}
+.navbar .top {
+  background-color: #dddddda9;
+
+  grid-column: 2 / 12;
+  grid-row: 1;
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  padding: 1%;
+}
+
+.navbar .top .hours {
+  grid-column: 2/10;
+}
